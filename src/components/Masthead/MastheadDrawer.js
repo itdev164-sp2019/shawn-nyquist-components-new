@@ -25,7 +25,7 @@ const Spacer = styled.div`
     float: none;
 `
 
-export const Drawer = ({ variant, children, width, ...props }) => (
+export const MastheadDrawer = ({ variant, children, width, ...props }) => (
     <div>
         <Outer {...props}>
             <Nav flex alignItems="center" justifyContent="space-evenly" width={width} {...props}>
@@ -36,7 +36,7 @@ export const Drawer = ({ variant, children, width, ...props }) => (
     </div>
 )
 
-Drawer.propTypes = {
+MastheadDrawer.propTypes = {
     variant: PropTypes.string,
     height: PropTypes.string.isRequired,
     width: PropTypes.string.isRequired,
