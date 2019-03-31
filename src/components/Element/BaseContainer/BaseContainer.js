@@ -1,9 +1,20 @@
+// @flow
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Flex, Box } from 'rebass'
 
-export const BaseContainer = ({ children, flex, ...props }) => {
-  if (flex) {
+export function BaseContainer({ 
+  children, 
+  flex, 
+  className,
+  ...props 
+}: {
+    children: React.Node,
+    flex: boolean,
+    className: string,
+    props: any
+}) {
+    if (flex) {
     return (
       <Flex {...props} className={props.className}>
         {children}
@@ -15,7 +26,7 @@ export const BaseContainer = ({ children, flex, ...props }) => {
         {children}
       </Box>
     )
-  }
+  } 
 }
 
 BaseContainer.propTypes = {
