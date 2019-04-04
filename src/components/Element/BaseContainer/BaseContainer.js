@@ -31,5 +31,6 @@ export function BaseContainer({
 
 BaseContainer.propTypes = {
   flex: PropTypes.bool,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string
 }
